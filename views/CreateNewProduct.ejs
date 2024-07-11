@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../public/images/EyeGlaLogo.webp">
+    <!-- Implementing Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <!-- Google Fonts Raleway -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Create New Product</title>
+    <style>
+        *::selection{
+            background-color: rgba(244, 30, 30, 0.822);
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Admin Pannel ka NavBar -->
+    <nav class="h-14 bg-zinc-900 lg:px-[8.5%] px-[9.5%] flex flex-row justify-between items-center text-white">
+        <h1 class="font-semibold text-lg">Admin Pannel</h1>
+        <ul class="list-none gap-8 lg:flex hidden lg:flex-row lg:visible ">
+            <li class="hover:text-red-600 duration-200"><a href="/admin/">Home</a></li>
+            <li class=" hover:text-red-600 duration-200"><a href="/admin/allusers">All Users</a></li>
+            <li class="hover:text-red-600 duration-200"><a href="">My Account</a></li>
+        </ul>
+        <i class="ri-menu-2-line lg:hidden visible"></i>
+    </nav>
+
+    <!-- Admin Pannel ka Create New Product Page -->
+    <div class="w-full min-h-screen flex justify-evenly lg:flex-row flex-col px-10 bg-zinc-800 text-white">
+        <!-- Left Section -->
+        <div class="lg:w-1/6 w-full lg:py-20 flex lg:flex-col my-5 lg:my-0 flex-row gap-4 justify-start  text-gray-500  text-left lg:border-r border-b">
+            <h5 class=" hover:text-white hover:font-medium duration-150"><a href="/admin/">Your Products</a></h5>
+            <h5 class=" hover:text-white hover:font-medium duration-150"><a href="/admin/createnewproduct">Create New Product</a></h5>
+        </div>
+        <!-- Right Section में create product का  form है -->
+        <div class="w-4/6 flex flex-col gap-5 justify-center text-left ">
+            <h4 class="font-semibold text-xl"><i class="ri-file-add-fill"></i> Create New Product</h4>
+            <hr>
+            <form action="/admin/createnewproduct" method="post" class="flex flex-wrap flext-col gap-5 w-full ">
+                <label for="">Product Image <input type="file" class="rounded-full border  border-zinc-500 text-gray-400 overflow-hidden"></label>
+                <input type="text" placeholder="Product Name" class="p-4 lg:w-5/6 max-w-screen border border-zinc-400 rounded-lg bg-gray-50">
+                <input type="number" placeholder="Product Price" class="p-4 lg:w-5/6 max-w-screen border border-zinc-400 rounded-lg  bg-gray-50">
+                <input type="number" placeholder="Discount Price" class="p-4 lg:w-5/6 max-w-screen border border-zinc-400 rounded-lg  bg-gray-50">
+                <h4 class="font-medium text-lg w-full">Pannel Details</h4> 
+                <input type="text" placeholder="Background Colour" class="p-4 lg:w-1/3 max-w-screen border border-zinc-400 rounded-lg  bg-gray-50">
+                <input type="text" placeholder="Pannel Colour" class="p-4 lg:w-1/3 max-w-screen border border-zinc-400 rounded-lg  bg-gray-50"> 
+                <input type="submit" value="Create" class="rounded-3xl bg-blue-400 hover:bg-blue-500 hover:scale-95 cursor-pointer duration-150 lg:w-2/6 w-1/2 p-3 text-white font-semibold">
+            </form>
+            
+            
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

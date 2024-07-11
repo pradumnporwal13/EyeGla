@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="icon" href="../public/images/EyeGlaLogo.webp">
+    <!-- Google Fonts Raleway -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>EyeGla</title>
+    <style>
+        *{
+            font-family: "Raleway", sans-serif;
+        }
+        *::selection{
+            background-color: rgba(244, 30, 30, 0.822);
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex flex-col lg:flex-row justify-evenly gap-5 px-1  lg:py-0 py-4 lg:px-20 w-full h-screen bg-white">
+        <!-- Part 1 of Page which is related to Sign Up -->
+        <div class="lg:h-full w-full flex flex-col gap-7 justify-center lg:w-2/6 bg-gray-200 text-left px-10 py-3">
+            <h2 class="font-extrabold text-[50px]">Welecome to <span class="text-red-500 ">EyeGla</span></h2>
+            <h5 class="font-medium text-sm text-zinc-600"> Create New Account </h5>
+            <form action="/user/register" method="post" class="flex flex-col w-full gap-4">
+             <input type="text" placeholder="Enter your Name" class="p-3 rounded-md" name="nameForRegister">
+             <input type="email" placeholder="Enter your Email Address" class="p-3 rounded-md" name="emailForRegister">
+             <input type="password" placeholder="Enter your Password" class="p-3 rounded-md" name="passwordForRegister">
+             <input type="submit" class="w-2/3 text-center bg-red-400 hover:bg-red-500 hover:scale-105 duration-200 rounded-3xl p-2 text-white font-extrabold ">
+            </form>
+        </div>
+        <!-- Part 2 of the Page which is nothing but "Or" button which don't include any functionality -->
+        <div class="lg:h-full flex flex-col justify-center items-center"><div class="rounded-full font-bold h-12 w-12 lg:text-lg text-center bg-red-600 hover:scale-110 duration-300 text-white p-2 overflow-hidden">Or</div></div>
+        <!-- Part 3 of Page which is related to Login -->
+        <div class="lg:h-full w-full flex flex-col justify-center lg:w-2/6 px-10 py-2 gap-7">
+            <h2 class="font-semibold text-[23px]">Login to your Account</h2>
+            <form action="/user/login" method="post" class="flex flex-col w-full gap-5">
+                <input type="email" placeholder="Enter your Email Address" class="p-3 rounded-md border border-zinc-400" name="loginEmail">
+                <input type="password" placeholder="Enter your Password" class="p-3 rounded-md border border-zinc-400" name="loginPassword">
+                <input type="submit" value="Login"  class="w-1/3 text-center bg-red-400 hover:bg-red-500 hover:scale-105 duration-200 rounded-3xl p-2 text-white font-extrabold ">
+            </form>
+
+        </div>
+    </div>
+    
+</body>
+</html>

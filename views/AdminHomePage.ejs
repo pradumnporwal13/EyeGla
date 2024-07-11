@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Applying Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="icon" href="../public/images/EyeGlaLogo.webp">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <!-- Google Fonts Raleway -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>EyeGla</title>
+    <style>
+        *::selection{
+            background-color: rgba(244, 30, 30, 0.822);
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <!-- Admin Pannel ka NavBar -->
+    <nav class="h-14 bg-zinc-900 lg:px-[8.5%] px-[9.5%] flex flex-row justify-between items-center text-white">
+        <h1 class="font-semibold text-lg">Admin Pannel</h1>
+        <ul class="list-none gap-8 lg:flex hidden lg:flex-row lg:visible ">
+            <li class=" hover:text-red-600 duration-200"><a href="/admin/">Home</a></li>
+            <li class=" hover:text-red-600 duration-200"><a href="/admin/allusers">All Users</a></li>
+            <li class=" hover:text-red-600 duration-200"><a href="">My Account</a></li>
+        </ul>
+        <i class="ri-menu-2-line lg:hidden visible"></i>
+    </nav>
+
+    <!-- Admin Pannel ka Home Page -->
+    <div class="w-full min-h-screen flex justify-evenly lg:flex-row flex-col px-10  bg-zinc-800 text-white">
+        <!-- Left Section -->
+        <div class="lg:w-1/6 w-full lg:py-20 flex lg:flex-col my-5 lg:my-0 flex-row gap-4 justify-start  text-gray-500 text-left lg:border-r border-b">
+            <h5 class=" hover:text-white hover:font-medium duration-150 lg:border-r-0 border-r lg:pr-0 pr-4 "><a href="/admin/">Your Products</a></h5>
+            <h5 class=" hover:text-white hover:font-medium duration-150"><a href="/admin/createnewproduct">Create New Product</a></h5>
+        </div>
+        <!-- Right Section -->
+        <div class="lg:w-4/6 w-full flex flex-col gap-5 justify-start text-left">
+            <div class="flex lg:flex-row flex-col gap-10 justify-between lg:pt-20 ">
+                <h4 class="font-semibold text-xl"><i class="ri-tools-fill"></i> Admin Customization</h4>
+                <h6 class="bg-red-500 font-semibold hover:bg-red-700 hover:scale-95 duration-300 rounded-lg text-sm p-2 text-white"><a href=""><i class="font-light text-lg ri-delete-bin-6-fill"></i> Delete All Products  </a></h6>
+            </div>
+            <!-- Secarh Bar -->
+            <div class="flex  flex-row gap-0.5" >
+                <input type="text" class="w-full h-10 bg-transparent text-white border-white border rounded-l-full px-5" placeholder="Search...">
+                <i class="h-10 rounded-r-full bg-black hover:bg-green-500 duration-300  border text-white p-2 w-10 ri-search-2-line"></i>
+            </div>
+            <hr>
+            <!-- Cards Container -->
+            <div class="flex flex-wrap  justify-start flex-row gap-5 ">
+                <!-- All Cards Come here one by- one -->
+
+                <!-- Card-1  -->
+                <div class="flex flex-col rounded-md h-auto w-full lg:w-40 overflow-hidden hover:scale-110 duration-300 relative" >
+                    <img src="https://freepngimg.com/thumb/women_bag/144730-orange-handbag-ladies-free-transparent-image-hq-thumb.png" alt="" class="object-cover object-center bg-orange-300 w-full h-40">
+                    <a class="absolute rounded-full hover:scale-105 duration-100 bg-white right-1 top-1" href=""><img src="https://cdn-icons-png.freepik.com/512/3807/3807871.png" class="w-8 h-8"alt=""></a>
+                    <a class="absolute rounded-full hover:scale-105 duration-100 bg-white right-1 top-10" href=""><img src="https://cdn-icons-png.flaticon.com/512/1057/1057097.png" class="w-8 h-8"alt=""></a>
+                    <!-- Card pannel -->
+                    <div class="flex flex-col w-full bg-orange-400 px-5 py-2.5">
+                        <h4 class="font-semibold text-sm text-white">Handbag Orange</h4>
+                        <h4 class="text-sm text-white">1278₹</h4>
+                    </div>
+                </div>
+                <!-- Card-2  -->
+                <div class="flex flex-col rounded-md h-auto w-full lg:w-40 overflow-hidden hover:scale-110 duration-300 relative" >
+                    <img src="https://www.freeiconspng.com/thumbs/bag-png/clothing-bag-png-1.png" alt="" class="object-cover object-center bg-red-200 w-full h-40">
+                    <a class="absolute rounded-full hover:scale-105 duration-100 bg-white right-1 top-1" href=""><img src="https://cdn-icons-png.freepik.com/512/3807/3807871.png" class="w-8 h-8"alt=""></a>
+                    <a class="absolute rounded-full hover:scale-105 duration-100 bg-white right-1 top-10" href=""><img src="https://cdn-icons-png.flaticon.com/512/1057/1057097.png" class="w-8 h-8"alt=""></a>
+                    <!-- Card pannel -->
+                    <div class="flex flex-col w-full bg-red-400 px-5 py-2.5">
+                        <h4 class="font-semibold text-sm text-white">Leather Handbag</h4>
+                        <h4 class="text-sm text-white">1278₹</h4>
+                    </div>
+                </div>
+                <!-- Card-3  -->
+                <div class="flex flex-col rounded-md h-auto w-full lg:w-40 overflow-hidden hover:scale-110 duration-300 relative" >
+                    <img src="https://png.pngtree.com/png-clipart/20240202/original/pngtree-cyan-color-handbag-on-white-background-png-image_14215441.png" alt="" class="object-cover object-center bg-teal-100 w-full h-40">
+                    <a class="absolute rounded-full hover:scale-105 duration-100 bg-white right-1 top-1" href=""><img src="https://cdn-icons-png.freepik.com/512/3807/3807871.png" class="w-8 h-8"alt=""></a>
+                    <a class="absolute rounded-full hover:scale-105 duration-100 bg-white right-1 top-10" href=""><img src="https://cdn-icons-png.flaticon.com/512/1057/1057097.png" class="w-8 h-8"alt=""></a>
+                    <!-- Card pannel -->
+                    <div class="flex flex-col w-full bg-teal-400 px-5 py-2.5">
+                        <h4 class="font-semibold text-sm text-white">Teal Ladies Bag</h4>
+                        <h4 class="text-sm text-white">1278₹</h4>
+                    </div>
+                </div>
+                <!-- Card-4  -->
+                <div class="flex flex-col rounded-md h-auto w-full lg:w-40 overflow-hidden hover:scale-110 duration-300 relative" >
+                    <img src="https://freepngimg.com/save/18062-watch-free-png-image/695x501" alt="" class="object-cover object-center bg-slate-100 w-full h-40">
+                    <a class="absolute rounded-full hover:scale-105 duration-100 bg-white right-1 top-1" href=""><img src="https://cdn-icons-png.freepik.com/512/3807/3807871.png" class="w-8 h-8"alt=""></a>
+                    <a class="absolute rounded-full hover:scale-105 duration-100 bg-white right-1 top-10" href=""><img src="https://cdn-icons-png.flaticon.com/512/1057/1057097.png" class="w-8 h-8"alt=""></a>
+                    <!-- Card pannel -->
+                    <div class="flex flex-col w-full bg-slate-400 px-5 py-2.5">
+                        <h4 class="font-semibold text-sm text-white">Analog Watch</h4>
+                        <h4 class="text-sm text-white">1678₹</h4>
+                    </div>
+                </div>
+                <!-- Card-5  -->
+                <div class="flex flex-col rounded-md h-auto w-full lg:w-40 overflow-hidden hover:scale-110 duration-300 relative" >
+                    <img src="https://pngfre.com/wp-content/uploads/Watche2.png" alt="" class="object-cover object-center bg-amber-100 w-full h-40">
+                    <a class="absolute rounded-full hover:scale-105 duration-100 bg-white right-1 top-1" href=""><img src="https://cdn-icons-png.freepik.com/512/3807/3807871.png" class="w-8 h-8"alt=""></a>
+                    <a class="absolute rounded-full hover:scale-105 duration-100 bg-white right-1 top-10" href=""><img src="https://cdn-icons-png.flaticon.com/512/1057/1057097.png" class="w-8 h-8"alt=""></a>
+                    <!-- Card pannel -->
+                    <div class="flex flex-col w-full bg-amber-400 px-5 py-2.5 text-wrap">
+                        <h4 class="font-semibold text-sm text-white">Analog Watch</h4>
+                        <h4 class="text-sm text-white">1278₹</h4>
+                    </div>
+                </div>
+                <!-- Card-6  -->
+                <div class="flex flex-col rounded-md h-auto w-full lg:w-40 overflow-hidden hover:scale-110 duration-300 relative" >
+                    <img src="https://images.dailyobjects.com/marche/product-images/1305/green-urbangentleman-leather-mens-wallet-images/Green-UrbanGentleman-Leather-Mens-Wallet.png?tr=cm-pad_resize,v-2,w-412,h-490,dpr-2,q-60" alt="" class="object-cover object-center bg-emerald-100 w-full h-40">
+                    <a class="absolute rounded-full hover:scale-105 duration-100 bg-white right-1 top-1" href=""><img src="https://cdn-icons-png.freepik.com/512/3807/3807871.png" class="w-8 h-8"alt=""></a>
+                    <a class="absolute rounded-full hover:scale-105 duration-100 bg-white right-1 top-10" href=""><img src="https://cdn-icons-png.flaticon.com/512/1057/1057097.png" class="w-8 h-8"alt=""></a>
+                    <!-- Card pannel -->
+                    <div class="flex flex-col w-full bg-emerald-400 px-5 py-2.5 text-wrap">
+                        <h4 class="font-semibold text-sm text-white">Wallet</h4>
+                        <h4 class="text-sm text-white">1428₹</h4>
+                    </div>
+                </div>
+                <!-- Card-7  -->
+                <div class="flex flex-col rounded-md h-auto w-full lg:w-40 overflow-hidden hover:scale-110 duration-300 relative" >
+                    <img src="https://png.pngtree.com/png-clipart/20240202/original/pngtree-cyan-color-handbag-on-white-background-png-image_14215441.png" alt="" class="object-cover object-center bg-teal-100 w-full h-40">
+                    <a class="absolute rounded-full hover:scale-105 duration-100 bg-white right-1 top-1" href=""><img src="https://cdn-icons-png.freepik.com/512/3807/3807871.png" class="w-8 h-8"alt=""></a>
+                    <a class="absolute rounded-full hover:scale-105 duration-100 bg-white right-1 top-10" href=""><img src="https://cdn-icons-png.flaticon.com/512/1057/1057097.png" class="w-8 h-8"alt=""></a>
+                    <!-- Card pannel -->
+                    <div class="flex flex-col w-full bg-teal-400 px-5 py-2.5">
+                        <h4 class="font-semibold text-sm text-white">Teal Ladies Bag</h4>
+                        <h4 class="text-sm text-white">1278₹</h4>
+                    </div>
+                </div>
+                <!-- Card-8  -->
+                <div class="flex flex-col rounded-md h-auto w-full lg:w-40 overflow-hidden hover:scale-110 duration-300 relative" >
+                    <img src="https://freepngimg.com/save/18062-watch-free-png-image/695x501" alt="" class="object-cover object-center bg-slate-100 w-full h-40">
+                    <a class="absolute rounded-full hover:scale-105 duration-100 bg-white right-1 top-1" href=""><img src="https://cdn-icons-png.freepik.com/512/3807/3807871.png" class="w-8 h-8"alt=""></a>
+                    <a class="absolute rounded-full hover:scale-105 duration-100 bg-white right-1 top-10" href=""><img src="https://cdn-icons-png.flaticon.com/512/1057/1057097.png" class="w-8 h-8"alt=""></a>
+                    <!-- Card pannel -->
+                    <div class="flex flex-col w-full bg-slate-400 px-5 py-2.5">
+                        <h4 class="font-semibold text-sm text-white">Analog Watch</h4>
+                        <h4 class="text-sm text-white">1678₹</h4>
+                    </div>
+                </div>
+                <!-- Card-9  -->
+                <div class="flex flex-col rounded-md h-auto w-full lg:w-40 overflow-hidden hover:scale-110 duration-300 relative" >
+                    <img src="https://pngfre.com/wp-content/uploads/Watche2.png" alt="" class="object-cover object-center bg-amber-100 w-full h-40">
+                    <a class="absolute rounded-full hover:scale-105 duration-100 bg-white right-1 top-1" href=""><img src="https://cdn-icons-png.freepik.com/512/3807/3807871.png" class="w-8 h-8"alt=""></a>
+                    <a class="absolute rounded-full hover:scale-105 duration-100 bg-white right-1 top-10" href=""><img src="https://cdn-icons-png.flaticon.com/512/1057/1057097.png" class="w-8 h-8"alt=""></a>
+                    <!-- Card pannel -->
+                    <div class="flex flex-col w-full bg-amber-400 px-5 py-2.5 text-wrap">
+                        <h4 class="font-semibold text-sm text-white">Analog Watch</h4>
+                        <h4 class="text-sm text-white">1278₹</h4>
+                    </div>
+                </div>
+                <!-- Card-10  -->
+                <div class="flex flex-col rounded-md h-auto w-full lg:w-40 overflow-hidden hover:scale-110 duration-300 relative" >
+                    <img src="https://images.dailyobjects.com/marche/product-images/1305/green-urbangentleman-leather-mens-wallet-images/Green-UrbanGentleman-Leather-Mens-Wallet.png?tr=cm-pad_resize,v-2,w-412,h-490,dpr-2,q-60" alt="" class="object-cover object-center bg-emerald-100 w-full h-40">
+                    <a class="absolute rounded-full hover:scale-105 duration-100 bg-white right-1 top-1" href=""><img src="https://cdn-icons-png.freepik.com/512/3807/3807871.png" class="w-8 h-8"alt=""></a>
+                    <a class="absolute rounded-full hover:scale-105 duration-100 bg-white right-1 top-10" href=""><img src="https://cdn-icons-png.flaticon.com/512/1057/1057097.png" class="w-8 h-8"alt=""></a>
+                    <!-- Card pannel -->
+                    <div class="flex flex-col w-full bg-emerald-400 px-5 py-2.5 text-wrap">
+                        <h4 class="font-semibold text-sm text-white">Wallet</h4>
+                        <h4 class="text-sm text-white">1428₹</h4>
+                    </div>
+                </div>
+
+                
+                
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

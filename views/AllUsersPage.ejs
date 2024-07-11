@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Applying Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="icon" href="../public/images/EyeGlaLogo.webp">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <!-- Google Fonts Raleway -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>EyeGla Users</title>
+    <style>
+        *::selection{
+            background-color: rgba(244, 30, 30, 0.822);
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Admin Pannel ka NavBar -->
+    <nav class="h-14 bg-zinc-900 lg:px-[8.5%] px-[9.5%] flex flex-row justify-between items-center text-white">
+        <h1 class="font-semibold text-lg">Admin Pannel</h1>
+        <ul class="list-none gap-8 lg:flex hidden lg:flex-row lg:visible ">
+            <li class=" hover:text-red-600 duration-200"><a href="/admin/">Home</a></li>
+            <li class=" hover:text-red-600 duration-200"><a href="/admin/allusers">All Users</a></li>
+            <li class=" hover:text-red-600 duration-200"><a href="">My Account</a></li>
+
+        </ul>
+        <i class="ri-menu-2-line lg:hidden visible"></i>
+    </nav>
+
+    <!-- Admin Pannel ka Home Page -->
+    <div class="w-full min-h-screen flex justify-evenly lg:flex-row flex-col px-10  bg-zinc-800 text-white">
+        <!-- Left Section -->
+        <div class="lg:w-1/6 w-full lg:py-20 flex lg:flex-col my-5 lg:my-0 flex-row gap-4 justify-start  text-gray-500 text-left lg:border-r border-b">
+            <h5 class=" hover:text-white hover:font-medium duration-150 lg:border-r-0 border-r lg:pr-0 pr-4 "><a href="/admin/">Your Products</a></h5>
+            <h5 class=" hover:text-white hover:font-medium duration-150"><a href="/admin/createnewproduct">Create New Product</a></h5>
+        </div>
+        <!-- Right Section -->
+        <div class="lg:w-4/6 w-full flex flex-col gap-5 justify-start text-left">
+            <div class="flex lg:flex-row flex-col gap-10 justify-between lg:pt-20 ">
+                <h4 class="font-semibold text-xl"><i class="ri-user-settings-line"></i> Users Customization</h4>
+                <h6 class="bg-red-500 font-semibold hover:bg-red-700 hover:scale-95 duration-300 rounded-lg text-sm p-2 text-white"><a href=""><i class="font-light text-lg ri-delete-bin-6-fill"></i> Delete All Users  </a></h6>
+            </div>
+            <!-- Seacrh Bar -->
+            <div class="flex  flex-row gap-0.5" >
+                <input type="text" class="w-full h-10 bg-transparent text-white border-white border rounded-l-full px-5" placeholder="Search...">
+                <i class="h-10 rounded-r-full bg-black hover:bg-green-500 duration-300  border text-white p-2 w-10 ri-search-2-line"></i>
+            </div>
+            <!-- Showing All users Cars -->
+            <div class="flex flex-col justify-between items-center gap-3 text-left"> 
+                <% allUsers.forEach((user,index)=>{ %>
+                    <div class="w-full bg-zinc-300 hover:bg-zinc-200 rounded-md p-5 text-black flex flex-row justify-between items-center hover:scale-105 duration-300">
+                        <div class="flex flex-col gap-2">
+                            <h1>User Name : <%= user.name %></h1>
+                            <h2>Password : <%= user.password %></h2>
+                            <h4 class="text-gray-400">Email : <%= user.email %></h4>
+                        </div>
+                        <div class="flex flex-row gap-5">
+                            <% if(user.isAdmin ==true){ %>
+                                <i class="ri-admin-line text-green-400 text-2xl hover:scale-105"></i>
+                            <% }else{ %>
+                                <i class="ri-admin-line text-gray-400 text-2xl hover:scale-105"></i>
+                            <% } %>
+                            <a href="/admin/allusers/update/<%= user._id %>"><i class="ri-edit-circle-fill text-blue-400 text-2xl hover:scale-105"></i></a>
+                            <a href="/admin/delete/<%= user._id %>"><i class="ri-delete-bin-6-line text-red-500 text-2xl hover:scale-105"></i></a>
+                        </div>
+                    </div>
+
+                <% }) %>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
